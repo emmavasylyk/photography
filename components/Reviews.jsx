@@ -92,7 +92,7 @@ const Reviews = () => {
             spaceBetween={30}
             modules={[Pagination]}
             pagination={{ clickable: true }}
-            className="h-[350px]"
+            className="xl:h-[350px] md:h-[414px] notSm:h-[380px] h-[465px]"
           >
             {reviewsData.map((person, index) => (
               <SwiperSlide key={index}>

@@ -115,7 +115,7 @@ const Hero = () => {
         {/* Badge Section */}
         <div className="py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+            <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center md:grid-cols-3">
               <Fade
                 direction="up"
                 delay={800}
@@ -125,10 +125,10 @@ const Hero = () => {
               >
                 {/* Badge 1 */}
                 <div className="mx-auto flex max-w-xs flex-col gap-y-4">
-                  <dt className="text-base leading-7 text-muted-foreground">
+                  <dt className="text-base leading-7 text-muted-foreground text-center">
                     Years Of Experience
                   </dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <dd className="order-first text-3xl mx-auto font-semibold tracking-tight text-gray-900 sm:text-5xl">
                     <Badge
                       icon={<RiBookmark3Fill />}
                       endCountNum={12}
@@ -139,10 +139,10 @@ const Hero = () => {
 
                 {/* Badge 2 */}
                 <div className="mx-auto flex max-w-xs flex-col gap-y-4">
-                  <dt className="text-base leading-7 text-muted-foreground">
+                  <dt className="text-base leading-7 text-muted-foreground text-center">
                     Followers
                   </dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <dd className="order-first text-3xl mx-auto font-semibold tracking-tight text-gray-900 sm:text-5xl">
                     <Badge
                       icon={<RiBodyScanFill />}
                       endCountNum={967}
@@ -153,10 +153,10 @@ const Hero = () => {
 
                 {/* Badge 3 */}
                 <div className="mx-auto flex max-w-xs flex-col gap-y-4">
-                  <dt className="text-base leading-7 text-muted-foreground">
+                  <dt className="text-base leading-7 text-muted-foreground text-center">
                     Projects
                   </dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <dd className="order-first text-3xl mx-auto font-semibold tracking-tight text-gray-900 sm:text-5xl">
                     <Badge
                       icon={<RiServiceFill />}
                       endCountNum={79}

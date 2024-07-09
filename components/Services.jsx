@@ -2,7 +2,6 @@
 
 import { Fade } from "react-awesome-reveal";
 import { Smile, Scan, Bird } from "lucide-react";
-
 import {
   Card,
   CardContent,
@@ -49,7 +48,7 @@ const Services = () => {
         </Fade>
 
         {/* Category Items */}
-        <div className="grid xl:grid-cols-3 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8">
+        <div className="grid xl:grid-cols-3 md:flex md:gap-x-4 md:gap-y-10 md:flex-wrap justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8">
           <Fade
             direction="up"
             delay={600}
@@ -60,7 +59,7 @@ const Services = () => {
             {servicesData.map((item, index) => (
               <Card
                 key={index}
-                className="relative w-full max-w-[425px] h-[450px] flex flex-col pb-10 justify-center items-center cursor-pointer hover:bg-tertiary dark:hover:bg-white/10 transition-all duration-700"
+                className="relative md:w-[336px] w-full max-w-[425px] h-[450px] flex flex-col pb-10 justify-center items-center cursor-pointer hover:bg-tertiary dark:hover:bg-white/10 transition-all duration-700"
               >
                 <CardHeader className="text-primary">
                   <div className="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center absolute -bottom-6 right-6">
