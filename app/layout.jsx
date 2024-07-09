@@ -3,6 +3,9 @@ import "./globals.css";
 // Import Components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+import { Toaster } from "@/components/ui/toaster";
+
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 // Font update
@@ -27,6 +30,7 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <Footer />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
