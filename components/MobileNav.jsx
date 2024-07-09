@@ -1,8 +1,10 @@
+import { AlignJustify } from "lucide-react";
+
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
 import Nav from "./Nav";
 import Logo from "./Logo";
 import Socials from "./Socials";
-import { AlignJustify } from "lucide-react";
 
 const MobileNav = () => {
   return (
@@ -19,7 +21,6 @@ const MobileNav = () => {
               linkStyles="text-xl"
             />
           </div>
-          {/* Social Icons */}
           <Socials
             containerStyles="flex gap-x-4 items-center"
             iconStyles="text-2xl"

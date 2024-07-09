@@ -1,8 +1,6 @@
 import Link from "next/link";
-import React from "react";
-
-import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const links = [
   { path: "/", name: "home" },

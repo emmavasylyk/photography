@@ -1,26 +1,26 @@
-import React from "react";
-import { Card, CardHeader } from "./ui/card";
-import Image from "next/image";
-import { Badge } from "./ui/badge";
-import { Group, Link2Icon } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import { Group, Link2Icon } from "lucide-react";
+
+import { Badge } from "@/components/ui/badge";
+import { Card, CardHeader } from "@/components/ui/card";
 
 const ProjectCard = ({ project }) => {
   return (
     <Card className="group overflow-hidden relative">
       <CardHeader className="p-0">
         {/* Image */}
-        <div className="relative w-full h-[290px] flex items-center justify-center dark:bg-secondary/40 xl:bg-[100%] xl:bg-no-repeat overflow-hidden">
+        <div className="relative w-full flex items-center justify-center dark:bg-secondary/40 xl:bg-[100%] xl:bg-no-repeat overflow-hidden">
           <Image
             src={project.image}
-            alt=""
+            alt="photo"
             width={440}
             height={200}
-            priority
-            className="absolute top-0 shadow-2xl hover:scale-110 transition-all"
+            priority={100}
+            className="w-full shadow-2xl hover:scale-110 transition-all"
           />
           {/* Link Button */}
-          <div className="flex gap-x-4">
+          <div className="flex gap-x-4 absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
             <Link
               href={project.link}
               className="bg-secondary w-[55px] h-[55px] flex justify-center items-center rounded-full scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-50 duration-200 transition-all"
