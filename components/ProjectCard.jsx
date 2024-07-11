@@ -1,9 +1,15 @@
-import Link from "next/link";
 import Image from "next/image";
-import { Group, Link2Icon } from "lucide-react";
+import { Group } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -21,18 +27,24 @@ const ProjectCard = ({ project }) => {
           />
           {/* Link Button */}
           <div className="flex gap-x-4 absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
-            <Link
-              href={project.link}
-              className="bg-secondary w-[55px] h-[55px] flex justify-center items-center rounded-full scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-50 duration-200 transition-all"
-            >
-              <Link2Icon />
-            </Link>
-            <Link
-              href={project.codepen}
-              className="bg-secondary w-[55px] h-[55px] flex justify-center items-center rounded-full scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-50 duration-200 transition-all"
-            >
-              <Group />
-            </Link>
+            <Dialog>
+              <DialogTrigger className="bg-secondary w-[55px] h-[55px] flex justify-center items-center rounded-full scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-50 duration-200 transition-all">
+                <Group />
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle className="hidden">View Project</DialogTitle>
+                </DialogHeader>
+                <Image
+                  src={project.image}
+                  alt="photo"
+                  width={440}
+                  height={200}
+                  priority={100}
+                  className="w-full"
+                />
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </CardHeader>
